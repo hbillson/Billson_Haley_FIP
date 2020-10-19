@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "mappings": "AIAA,AAAA,IAAI,CAAC;EACD,WAAW,EFEH,WAAW,EAAE,UAAU;EED/B,SAAS,EFGI,IAAI;EEFjB,gBAAgB,EFFJ,OAAO;EEGnB,MAAM,EAAE,CAAC;EACT,MAAM,EAAE,CAAC;CACZ",
+    "sources": [
+        "../sass/master.scss",
+        "../sass/modules/_mediaqueries.scss",
+        "../sass/modules/_vars.scss",
+        "../sass/modules/_mixins.scss",
+        "../sass/modules/_main.scss",
+        "../sass/modules/_nav.scss",
+        "../sass/modules/_users.scss",
+        "../sass/modules/_footer.scss"
+    ],
+    "names": [],
+    "file": "master.css"
+}
