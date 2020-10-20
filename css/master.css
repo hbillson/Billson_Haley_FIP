@@ -1,8 +1,435 @@
+/* mixins styling */
+.button_link {
+  background-color: #5e889b;
+  width: 230px;
+  height: 70px;
+  border: none;
+  border-radius: 10px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.button_link a {
+  text-decoration: none;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #ecf0f5;
+}
+
+/* will be adding something in JS later to make the scroll more smooth when button is clicked */
+.button_link:hover {
+  background-color: #96dcd7;
+  cursor: pointer;
+}
+
+/* main page styling */
 body {
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
   background-color: #ecf0f5;
   margin: 0;
   border: 0;
+}
+
+/* font families */
+@font-face {
+  font-family: 'MOON GET!';
+  src: url("moon_get-Heavy.eot");
+  src: url("moon_get-Heavy.eot?#iefix") format("embedded-opentype"), url("moon_get-Heavy.woff2") format("woff2"), url("moon_get-Heavy.woff") format("woff"), url("moon_get-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* sticky top navigation bar styling */
+nav {
+  height: 10vh;
+  width: 100vw;
+  background-color: #ecf0f5;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+}
+
+nav .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav_bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.nav_bar .nav_link {
+  text-align: center;
+  vertical-align: center;
+  width: 25%;
+  height: 100%;
+}
+
+.nav_bar a {
+  color: #ecf0f5;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.nav_bar :nth-child(2) {
+  background-color: #96dcd7;
+}
+
+.nav_bar :nth-child(3) {
+  background-color: #5e889b;
+}
+
+.nav_bar :nth-child(4) {
+  background-color: #e6a0bd;
+}
+
+#logo {
+  height: 100%;
+}
+
+.logo_image {
+  display: inline-block;
+  margin: auto;
+  height: 80px;
+}
+
+/* landing box styling */
+#landing {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#left {
+  margin: 100px;
+  height: 100%;
+  width: 50%;
+}
+
+#right {
+  background-color: lightgray;
+  height: 100%;
+  width: 50%;
+}
+
+.intro_text {
+  letter-spacing: 5px;
+  padding-top: 75px;
+  width: 70%;
+  line-height: 1.5em;
+  font-family: "MOON GET!", sans-serif;
+  font-size: 80px;
+  color: #5e889b;
+  margin-bottom: 40px;
+}
+
+/* about section styling */
+#about {
+  height: auto;
+  width: 100vw;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #96dcd7;
+  padding-bottom: 100px;
+}
+
+#header_box {
+  width: inherit;
+  height: 50%;
+  margin: 0;
+  background-color: lightgray;
+}
+
+#header_box .name {
+  font-family: "MOON GET!", sans-serif;
+  font-size: 200px;
+  color: #ecf0f5;
+  text-align: center;
+}
+
+#bubbles_container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+#bubbles_container .bubble {
+  margin: 100px;
+  border-radius: 230px;
+  display: inline-block;
+  background-color: #ecf0f5;
+  height: 230px;
+  width: 230px;
+}
+
+#bubbles_container .bubble p {
+  margin-top: 45%;
+  color: #5e889b;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#bubbles_container .bigger {
+  height: 300px;
+  width: 300px;
+  border-radius: 300px;
+}
+
+#information_container {
+  width: 100%;
+  text-align: center;
+}
+
+#information_container .subtitle {
+  color: #4b6d87;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+#information_container .information {
+  color: #4b6d87;
+  font-weight: 400;
+  line-height: 2;
+}
+
+#information_container button {
+  margin-top: 40px;
+  background-color: #e6a0bd;
+  color: #ecf0f5;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#information_container button:hover {
+  background-color: #5e889b;
+}
+
+/* works section styling */
+#works {
+  height: auto;
+  width: 100vw;
+  background-color: #5e889b;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+#works_container {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.line {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: space-around;
+          flex-direction: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 80px;
+}
+
+.line .work {
+  text-align: center;
+  margin-left: 60px;
+  margin-right: 60px;
+  width: 25%;
+  height: 50%;
+  color: #ecf0f5;
+}
+
+.line .thumbnail {
+  width: 100%;
+  height: 350px;
+  background-color: #ecf0f5;
+  border-radius: 15px;
+}
+
+.line h4 {
+  font-weight: 500;
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.line h5 {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: left;
+  margin: 0;
+}
+
+/* contact page styling */
+#contact {
+  width: 100vw;
+  height: auto;
+  background-color: #e6a0bd;
+}
+
+#contact #contact_container {
+  width: 100%;
+  height: 100vh;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact #contact_container .contact_column {
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 0;
+  width: 50%;
+  height: 1000px;
+  background-color: #e6a0bd;
+  vertical-align: middle;
+}
+
+#contact #contact_container #contact_form {
+  margin-top: 45%;
+  text-align: center;
+  width: 75%;
+  height: 50%;
+  background-color: #4b6d87;
+}
+
+#contact #contact_container .socials_description {
+  margin-top: 45%;
+  padding-top: 18%;
+  color: #ecf0f5;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 500;
+}
+
+#contact #contact_container #socials_container {
+  padding-left: 13%;
+  padding-right: 12%;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+}
+
+#contact #contact_container #socials_container .social_link {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-color: #ecf0f5;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+#contact #contact_container #socials_container .social_link:hover {
+  background-color: #96dcd7;
+}
+
+/* footer styling */
+footer {
+  height: 150px;
+  background-color: #4b6d87;
+  width: 100vw;
+  color: #ecf0f5;
 }
 /*# sourceMappingURL=master.css.map */

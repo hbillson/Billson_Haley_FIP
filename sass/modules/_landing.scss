@@ -1,0 +1,31 @@
+/* landing box styling */
+
+#landing {
+    height:100vh;
+    width:100vw;
+    display:flex;
+    flex-direction:row;
+}
+
+#left {
+    margin:100px;
+    height:100%;
+    width:50%
+}
+
+#right {
+    background-color:lightgray;
+    height:100%;
+    width:50%;
+}
+
+.intro_text {
+    letter-spacing:5px;
+    padding-top:75px;
+    width:70%;
+    line-height:1.5em;
+    font-family: $accent-font;
+    font-size:80px;
+    color:$accent-teal;
+    margin-bottom:40px;
+}

@@ -1,0 +1,57 @@
+/* sticky top navigation bar styling */
+
+nav {
+    height:10vh;
+    width:100vw;
+    background-color: $main-bg-color;
+    text-align:center;
+    text-decoration: none;
+    margin:0;
+
+    .sticky {
+        position:fixed;
+        top:0;
+        width:100%;
+    }
+}
+
+.nav_bar {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    height: 100%;
+
+    .nav_link {
+        text-align:center;
+        vertical-align:center;
+        width:25%;
+        height:100%;
+    }
+    a {
+        color:$main-bg-color;
+        text-decoration:none;
+        font-weight:500;
+        font-size:24px;
+    }
+    :nth-child(2) {
+        background-color:$accent-turquoise;
+    }
+    :nth-child(3) {
+        background-color:$accent-teal;
+    }
+    :nth-child(4) {
+        background-color:$accent-pink;
+    }
+}
+
+#logo {
+    height:100%;
+}
+
+.logo_image {
+    display:inline-block;
+    margin:auto;
+    height:80px;
+}
+
