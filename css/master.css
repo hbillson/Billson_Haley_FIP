@@ -35,16 +35,16 @@ body {
 /* font families */
 @font-face {
   font-family: 'MOON GET!';
-  src: url("moon_get-Heavy.eot");
-  src: url("moon_get-Heavy.eot?#iefix") format("embedded-opentype"), url("moon_get-Heavy.woff2") format("woff2"), url("moon_get-Heavy.woff") format("woff"), url("moon_get-Heavy.ttf") format("truetype");
+  src: url("../fonts/moon_get-Heavy.eot");
+  src: url("../fonts/moon_get-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/moon_get-Heavy.woff2") format("woff2"), url("../fonts/moon_get-Heavy.woff") format("woff"), url("../fonts/moon_get-Heavy.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 /* sticky top navigation bar styling */
-nav {
-  height: 10vh;
+#mainNav {
+  height: 100px;
   width: 100vw;
   background-color: #ecf0f5;
   text-align: center;
@@ -52,7 +52,7 @@ nav {
   margin: 0;
 }
 
-nav .sticky {
+.sticky {
   position: fixed;
   top: 0;
   width: 100%;
@@ -148,10 +148,9 @@ nav .sticky {
 }
 
 /* about section styling */
-#about {
+.about {
   height: auto;
   width: 100vw;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,7 +177,7 @@ nav .sticky {
 
 #header_box .name {
   font-family: "MOON GET!", sans-serif;
-  font-size: 200px;
+  font-size: 150px;
   color: #ecf0f5;
   text-align: center;
 }
@@ -261,7 +260,7 @@ nav .sticky {
 }
 
 /* works section styling */
-#works {
+.works {
   height: auto;
   width: 100vw;
   background-color: #5e889b;

@@ -1,18 +1,18 @@
 /* sticky top navigation bar styling */
 
-nav {
-    height:10vh;
+#mainNav {
+    height:100px;
     width:100vw;
     background-color: $main-bg-color;
     text-align:center;
     text-decoration: none;
     margin:0;
+}
 
-    .sticky {
-        position:fixed;
-        top:0;
-        width:100%;
-    }
+.sticky {
+    position:fixed;
+    top:0;
+    width:100%;
 }
 
 .nav_bar {
