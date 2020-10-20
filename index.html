@@ -13,91 +13,105 @@
 </head>
 
 <body>
-    <main>
+    <div id="container">
         <!--LANDING PAGE-->
         <section id="landing">
                 <section id="left">
-                    <h1 class="intro_text">Hi, I'm Haley</h1>
-                    <button href="#about" class="button_link">Who?</button>
+                    <h1 class="intro_text">Hi,<br> I'm <span style="color:#96dcd7">Haley</span>.</h1>
+                    <button id="about_button" class="button_link"><a>Who?</a></button>
                 </section>
                 <section id="right">
                     <div id="intro_box">
-                        <img src="" alt="intro image" class="intro_box">
+                        <img src="" alt="intro image" class="intro_box"></img>
                     </div>
                 </section>
         </section>
         <!--END LANDING PAGE-->
  
         <!--STICKY NAVIGATION BAR-->
-        <nav id="id">
-            <div id="logo">
-                <img src="" alt="HB logo" class="logo_image">
-            </div>
+        <nav id="mainNav">
             <div class="nav_bar">
-                <a href="#about" class="about_link">ABOUT</a>
-                <a href="#works" class="works_link">WORKS</a>
-                <a href="contact" class="contact_link">CONTACT</a>
+                <img src="images/logo.png" alt="HB logo" class="logo_image">
+                <div class="nav_link"><a href="#about">ABOUT</a></div>
+                <div class="nav_link"><a href="#works">WORKS</a></div>
+                <div class="nav_link"><a href="contact">CONTACT</a></div>                
             </div>
         </nav>
 
         <!--END STICKY NAVIGATION BAR-->
 
         <!--ABOUT SECTION-->
-        <section id="about">
+        <section class="about">
             <div id="header_box">
                 <img src="" alt="" class="header">
                 <h1 class="name">HALEY BILLSON</h1>
             </div>
             <div id="bubbles_container">
-                <div class="bubble">Development</div>
-                <div class="bubble" class="bigger">Design</div>
-                <div class="bubble">Illustration</div>
+                <div class="bubble"><p>Development</p></div>
+                <div class="bubble bigger"><p>Design</p></div>
+                <div class="bubble"><p>Illustration</p></div>
             </div>
             <div id="information_container">
                 <h3 class="subtitle">Student - Freelancer - Hobbyist</h3>
                 <p class="information">
                     insert description
                 </p>
-                <h3 class="subtitle">Thicker text</h3>
-                <button href="#works" class="button_link">WORKS LINK</button>
+                <h3 class="subtitle" id="demo">Thicker text</h3>
+                <button id="works_button" class="button_link">WORKS LINK</button>
             </div>
         </section>
         <!--END ABOUT SECTION-->
 
         <!--WORK SECTION-->
-        <section id="works">
+        <section class="works">
             <div id="works_container">
                 <!--INSERT CAROUSEL CODE-->
+                <div class="line">
                 <!--these are placeholder thumbnails-->
-                <img src="" alt="" class="thumbnail">
-                <div class="caption">
-                    <h4>[work title]</h4>
-                    <h5>[date]</h5>
+                    <div class="work">
+                        <img src="" alt="" class="thumbnail">
+                        <div class="caption">
+                            <h4>[work title]</h4>
+                            <h5>[date]</h5>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="" alt="" class="thumbnail">
+                        <div class="caption">
+                            <h4>[work title]</h4>
+                            <h5>[date]</h5>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="" alt="" class="thumbnail">
+                        <div class="caption">
+                            <h4>[work title]</h4>
+                            <h5>[date]</h5>
+                        </div>
+                    </div>
                 </div>
-                <img src="" alt="" class="thumbnail">
-                <div class="caption">
-                    <h4>[work title]</h4>
-                    <h5>[date]</h5>
-                </div>
-                <img src="" alt="" class="thumbnail">
-                <div class="caption">
-                    <h4>[work title]</h4>
-                    <h5>[date]</h5>
-                </div>
-                <img src="" alt="" class="thumbnail">
-                <div class="caption">
-                    <h4>[work title]</h4>
-                    <h5>[date]</h5>
-                </div>
-                <img src="" alt="" class="thumbnail">
-                <div class="caption">
-                    <h4>[work title]</h4>
-                    <h5>[date]</h5>
-                </div>
-                <img src="" alt="" class="thumbnail">
-                <div class="caption">
-                    <h4>[work title]</h4>
-                    <h5>[date]</h5>
+                <div class="line">
+                    <div class="work">
+                        <img src="" alt="" class="thumbnail">
+                        <div class="caption">
+                            <h4>[work title]</h4>
+                            <h5>[date]</h5>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="" alt="" class="thumbnail">
+                        <div class="caption">
+                            <h4>[work title]</h4>
+                            <h5>[date]</h5>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="" alt="" class="thumbnail">
+                        <div class="caption">
+                            <h4>[work title]</h4>
+                            <h5>[date]</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -105,18 +119,40 @@
         <!--END WORK SECTION-->
 
         <!--CONTACT SECTION-->
+
+        <!--the styling will change, haven't designed this page yet-->
         <section id="contact">
-            <!--TO BE ADDED-->
+            <div id="contact_container">
+                <div class="contact_column">
+                    <div id="contact_form">
+                        <!--form here-->
+                        [contact form will be here]
+                    </div>
+                </div>
+                <div class="contact_column">
+                    <p class="socials_description">
+                        FIND ME:
+                    </p>
+                    <div id="socials_container">
+                        <div class="social_link"></div>
+                        <div class="social_link"></div>
+                        <div class="social_link"></div>
+                        <div class="social_link"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--CONTENT TO BE ADDED-->
         </section>
 
         <!--END CONTACT SECTION-->
     
-    </main>
+    </div>
 
     <!--FOOTER-->
 
     <footer>
-        
+
     </footer>
 
     <!--END FOOTER-->
