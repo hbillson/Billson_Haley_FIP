@@ -15,7 +15,7 @@
 <body>
     <div id="container">
         <!--LANDING PAGE-->
-        <section id="landing">
+        <section class="landing">
                 <section id="left">
                     <h1 class="intro_text">Hi,<br> I'm <span style="color:#96dcd7">Haley</span>.</h1>
                     <button id="about_button" class="button_link"><a>Who?</a></button>
@@ -31,10 +31,10 @@
         <!--STICKY NAVIGATION BAR-->
         <nav id="mainNav">
             <div class="nav_bar">
-                <img src="images/logo.png" alt="HB logo" class="logo_image">
-                <div class="nav_link"><a href="#about">ABOUT</a></div>
-                <div class="nav_link"><a href="#works">WORKS</a></div>
-                <div class="nav_link"><a href="contact">CONTACT</a></div>                
+                <img src="images/logo.png" alt="HB logo" class="logo_image" id="landing_button">
+                <div id="about_link" class="nav_link"><a href="#about">ABOUT</a></div>
+                <div id="works_link" class="nav_link"><a href="#works">WORKS</a></div>
+                <div id="contact_link" class="nav_link"><a href="#contact">CONTACT</a></div>                
             </div>
         </nav>
 
@@ -64,54 +64,15 @@
 
         <!--WORK SECTION-->
         <section class="works">
-            <div id="works_container">
                 <!--INSERT CAROUSEL CODE-->
-                <div class="line">
                 <!--these are placeholder thumbnails-->
-                    <div class="work">
-                        <img src="" alt="" class="thumbnail">
+                   <div class="work">
+                       <img class="work_img" src="images/coors_1.jpg" alt=""></img>
+                        <!-- <img src="" alt="" class="thumbnail">
                         <div class="caption">
                             <h4>[work title]</h4>
                             <h5>[date]</h5>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="" alt="" class="thumbnail">
-                        <div class="caption">
-                            <h4>[work title]</h4>
-                            <h5>[date]</h5>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="" alt="" class="thumbnail">
-                        <div class="caption">
-                            <h4>[work title]</h4>
-                            <h5>[date]</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="line">
-                    <div class="work">
-                        <img src="" alt="" class="thumbnail">
-                        <div class="caption">
-                            <h4>[work title]</h4>
-                            <h5>[date]</h5>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="" alt="" class="thumbnail">
-                        <div class="caption">
-                            <h4>[work title]</h4>
-                            <h5>[date]</h5>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="" alt="" class="thumbnail">
-                        <div class="caption">
-                            <h4>[work title]</h4>
-                            <h5>[date]</h5>
-                        </div>
-                    </div>
+                        </div>-->
                 </div>
             </div>
         </section>
@@ -121,7 +82,7 @@
         <!--CONTACT SECTION-->
 
         <!--the styling will change, haven't designed this page yet-->
-        <section id="contact">
+        <section class="contact">
             <div id="contact_container">
                 <div class="contact_column">
                     <div id="contact_form">
@@ -157,7 +118,23 @@
 
     <!--END FOOTER-->
 
-    
+    <!-- CODE FOR POP=UP WINDOW (this is hidden normally) -->
+    <section id="popup" class="hidden">
+        <div id="popup_container">
+            <div class="close_window">
+                X
+            </div>
+            <img src="" class="work_full"></img>
+            <div class="work_info">
+                <h3 class="work_title">WORK TITLE</h3>
+                <h4 class="work_date">DATE</h4>
+                <p class="work_description">insert description</p>
+            </div>
+        </div>
+
+    </section>
+    <!-- END POPUP WINDOW -->
+
     <!-- script files always go here -->
     <script type="module" src="js/main.js"></script>
 </body>

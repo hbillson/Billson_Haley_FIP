@@ -1,0 +1,32 @@
+#popup {
+    height:100vh;
+    width:100vw;
+    top:0;
+    left:0;
+    position:fixed;
+    background-color:darkgray;
+}
+
+#popup_container {
+    height:100vh;
+    width:100vw;
+}
+
+.close_window {
+    font-size:24px;
+    color:white;
+}
+
+.work_full {
+    position:relative;
+    display:inline-block;
+    width:80%;
+    height:100%;
+    color:lightgray;
+}
+
+.work_info {
+    color:white;
+    margin:auto;
+    text-align:center;
+}
