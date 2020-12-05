@@ -22,3 +22,13 @@
     background-color:$accent-turquoise;
     cursor:pointer;
 }
+
+.hidden {
+    display:none;
+}
+
+#about_anchor {
+    display:none;
+    position:absolute;
+    top:10vh;
+}

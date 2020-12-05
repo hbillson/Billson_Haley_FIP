@@ -5,60 +5,47 @@
     //variables up here
 
     let scrollButtons = document.querySelectorAll(".button_link");
+    let navButtons = document.querySelectorAll(".nav_link")
     var navBar = document.getElementById("mainNav");
+    let mainLogo = document.querySelector(".logo_image");
     var stickyPos = navBar.offsetTop;
+    let thumbnails = document.querySelectorAll(".thumbnail");
 
 function scrollDown() {
     debugger;
     console.log(this.id);
     let anchor = this.id.split("_")[0];
-    console.log(anchor);
-
     let anchorID = `.${anchor}`;
-    console.log(anchorID);
     let scroll_element = document.querySelector(`${anchorID}`);
     //console.log(scroll_element);
-    scroll_element.scrollIntoView({behavior:'smooth'});
+    scroll_element.scrollIntoView({behavior:'smooth', block: 'start'});
 
 }
 
 function stickyNav () {
-    debugger;
-    console.log("scrolling!");
-    console.log(window.pageYOffset);
-    console.log(stickyPos);
+    let aboutBox = document.querySelector(".about");
     if (window.pageYOffset > stickyPos) {
         navBar.classList.add("sticky");
+        aboutBox.setAttribute("style", "margin-top:10vh");
     } else {
         navBar.classList.remove("sticky");
+        aboutBox.removeAttribute("style", "margin-top:10vh");
+
     }
 }
 
-// what the AJAX will look like when i have a server?
+function openPopup() {
+    debugger;
+    let popup_window = document.getElementById('popup');
+    console.log(popup_window);
+    popup_window.classList.remove("hidden");
+    console.log(popup_window.classList);
 
-    //let myReq = newXMLHttpRequest;
-    //myReq.open('GET', '../DataSet.json');
-
-    //myReq.send();
-
-    //function handleRequest() {
-     //   if (myReq.readyState == XMLHttpRequest.DONE) {
-    //       if (myReq.status === 200) {
-    //           handleDataSet(myReq.responseText) 
-    //       } else {
-    //          console.error(`${myReq.status}: broken!`);
-    //       }
-    //   } else {
-    //       console.log(`Request state: ${myReq.readyState}. Still processing...`)
-    //    }
-    // }
-
-    // AJAX for my WORK information pop-up here 
-
-
-
-// things that call the function down here
+}
 
 window.addEventListener("scroll", stickyNav);
+mainLogo.addEventListener("click", scrollDown);
+thumbnails.forEach(thumb => thumb.addEventListener("click", openPopup))
 scrollButtons.forEach(button =>button.addEventListener("click", scrollDown))
+navButtons.forEach(nav => nav.addEventListener("click", scrollDown))
 })();
