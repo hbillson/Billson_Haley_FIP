@@ -1,51 +1,68 @@
-// main js file
+import { fetchData } from "./modules/DataMiner.js";
+import Lightbox from "./modules/Lightbox.js";
+import Carousel from "./modules/Carousel.js";
+import { scrollDown } from "./modules/scrollFunctions.js";
+import { stickyNav } from "./modules/scrollFunctions.js";
+
 
 (() => {
 
-    //variables up here
+    let vue_info = new Vue({
 
-    let scrollButtons = document.querySelectorAll(".button_link");
-    let navButtons = document.querySelectorAll(".nav_link")
-    var navBar = document.getElementById("mainNav");
-    let mainLogo = document.querySelector(".logo_image");
-    var stickyPos = navBar.offsetTop;
-    let thumbnails = document.querySelectorAll(".thumbnail");
+        //el: "#app",
 
-function scrollDown() {
-    debugger;
-    console.log(this.id);
-    let anchor = this.id.split("_")[0];
-    let anchorID = `.${anchor}`;
-    let scroll_element = document.querySelector(`${anchorID}`);
-    //console.log(scroll_element);
-    scroll_element.scrollIntoView({behavior:'smooth', block: 'start'});
+        data: {
+            works: [],
+            currentWork: {},
+            mediaType: ""
+        },
+            created: function() {
+                window.addEventListener("scroll", stickyNav);
+             },
 
-}
+            mounted: function() {
+                let scrollButtons = document.querySelectorAll(".button_link");
+                let navButtons = document.querySelectorAll(".nav_link");
+                let mainLogo = document.querySelector(".logo_image");
 
-function stickyNav () {
-    let aboutBox = document.querySelector(".about");
-    if (window.pageYOffset > stickyPos) {
-        navBar.classList.add("sticky");
-        aboutBox.setAttribute("style", "margin-top:10vh");
-    } else {
-        navBar.classList.remove("sticky");
-        aboutBox.removeAttribute("style", "margin-top:10vh");
+                mainLogo.addEventListener("click", scrollDown);
+                scrollButtons.forEach(button =>button.addEventListener("click", scrollDown));
+                navButtons.forEach(nav => nav.addEventListener("click", scrollDown));
 
-    }
-}
+            console.log("Vue is mounted, trying a fetch for the initial data");
+            
+            fetchData("./includes/index.php")
+                .then(data => {
+                    //data.forEach(work => this.works.push(work));
+                    this.works = data;
+                })
+                .catch(err => console.error(err));
+        },
 
-function openPopup() {
-    debugger;
-    let popup_window = document.getElementById('popup');
-    console.log(popup_window);
-    popup_window.classList.remove("hidden");
-    console.log(popup_window.classList);
+        // run a method when we change our view (update the DOM with Vue)
+        updated: function() {
+            console.log('Vue just updated the DOM');
+        },
 
-}
+        methods: {
+            setComponent(work) {
+                debugger;
+                this.mediaType = work.mediatype;
+                this.currentWork = work;
 
-window.addEventListener("scroll", stickyNav);
-mainLogo.addEventListener("click", scrollDown);
-thumbnails.forEach(thumb => thumb.addEventListener("click", openPopup))
-scrollButtons.forEach(button =>button.addEventListener("click", scrollDown))
-navButtons.forEach(nav => nav.addEventListener("click", scrollDown))
+                document.querySelector(".lightbox").style.display = "block";
+                var y = window.scrollY;
+                console.log(y);
+                document.querySelector(".lightbox").style.top = `${y}px`;
+            }
+            },
+
+        components: {
+            "lightbox": Lightbox,
+            "carousel" : Carousel
+        }
+    })
+    .$mount("#app"); // also connects Vue to your wrapper in HTML
+ 
+
 })();
