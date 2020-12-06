@@ -9,6 +9,7 @@
     <!-- this has to be a css file -->
     <link rel="stylesheet" href="css/master.css">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
 </head>
@@ -24,7 +25,6 @@
                 </section>
                 <section id="right">
                     <div id="intro_box">
-                        <img src="" alt="intro image" class="intro_box"></img>
                     </div>
                 </section>
         </section>
@@ -50,16 +50,18 @@
             </div>
             <div id="bubbles_container">
                 <div class="bubble"><p>Development</p></div>
-                <div class="bubble bigger"><p>Design</p></div>
+                <div class="bubble"><p>Design</p></div>
                 <div class="bubble"><p>Illustration</p></div>
             </div>
             <div id="information_container">
-                <h3 class="subtitle">Student - Freelancer - Hobbyist</h3>
+                <h3 class="subtitle">Second year Interactive Media Design student.</h3>
                 <p class="information">
-                    insert description
+                    As a child, I had a fascination with cartoons, fantasy worlds, and making everything out to be 
+                    as vibrant and interesting as I could. As a teenager, I dreamed of taking my hobbies and turning them into
+                    a career - but I also started to pick up an interest in computers, particularly in the area of web development.
+                    As an adult, I'd be very pleased to visit my younger selves and tell them that I've found a way to combine both!
                 </p>
-                <h3 class="subtitle" id="demo">Thicker text</h3>
-                <button id="works_button" class="button_link">WORKS LINK</button>
+                <button id="works_button" class="button_link">VIEW MY GALLERY</button>
             </div>
         </section>
         <!--END ABOUT SECTION-->
@@ -68,9 +70,8 @@
         <section class="works">
                 <!--INSERT CAROUSEL CODE-->
                 <!--these are placeholder thumbnails-->
-                   <div class="work">
                        <div class="carousel">
-                            <carousel v-for="work in works" :work="work" :key="work.id" @setmediatype="setComponent"></carousel>
+                            <gallery v-for="work in works" :work="work" :key="work.id" @setmediatype="setComponent"></gallery>
                         </div>
                             <lightbox class="lightbox" :work="currentWork" :mediatype="mediaType"></lightbox>
                         <!-- <img src="" alt="" class="thumbnail">
@@ -79,7 +80,6 @@
                             <h5>[date]</h5>
                         </div>-->
                 </div>
-            </div>
         </section>
 
         <!--END WORK SECTION-->
@@ -100,10 +100,10 @@
                         FIND ME:
                     </p>
                     <div id="socials_container">
-                        <div class="social_link"></div>
-                        <div class="social_link"></div>
-                        <div class="social_link"></div>
-                        <div class="social_link"></div>
+                        <div class="social_link"><a href="#" class="fa fa-facebook"></a></div>
+                        <div class="social_link"><a href="#" class="fa fa-twitter"></a></div>
+                        <div class="social_link"><a href="#" class="fa fa-instagram"></a></div>
+                        <div class="social_link"><a href="#" class="fa fa-linkedin"></a></div>
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@
     <!--FOOTER-->
 </main>
     <footer>
-
+        Designed and Developed by Haley Billson. 2020-2021.
     </footer>
 
     <!--END FOOTER-->

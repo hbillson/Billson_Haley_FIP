@@ -1,16 +1,13 @@
 export default {
-    name: "Carousel",
+    name: "Gallery",
 
     props: ["work"],
 
+
     template: 
-    `<div @click="loadMediaComponent">
+    `<div class="thumb" @click="loadMediaComponent">
         <img  class="work_img" :src="work.smaller_img">
     </div>`,
-
-    created: function () {
-        console.log(`created ${this.work.title}`);
-    },
 
     methods: {
         loadMediaComponent(event) {
