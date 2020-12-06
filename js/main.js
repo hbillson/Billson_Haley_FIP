@@ -1,6 +1,6 @@
 import { fetchData } from "./modules/DataMiner.js";
 import Lightbox from "./modules/Lightbox.js";
-import Carousel from "./modules/Carousel.js";
+import Gallery from "./modules/Gallery.js";
 import { scrollDown } from "./modules/scrollFunctions.js";
 import { stickyNav } from "./modules/scrollFunctions.js";
 
@@ -14,7 +14,8 @@ import { stickyNav } from "./modules/scrollFunctions.js";
         data: {
             works: [],
             currentWork: {},
-            mediaType: ""
+            mediaType: "",
+            isShowing: false
         },
             created: function() {
                 window.addEventListener("scroll", stickyNav);
@@ -33,15 +34,15 @@ import { stickyNav } from "./modules/scrollFunctions.js";
             
             fetchData("./includes/index.php")
                 .then(data => {
-                    //data.forEach(work => this.works.push(work));
                     this.works = data;
                 })
                 .catch(err => console.error(err));
+
         },
 
         // run a method when we change our view (update the DOM with Vue)
         updated: function() {
-            console.log('Vue just updated the DOM');
+
         },
 
         methods: {
@@ -59,7 +60,7 @@ import { stickyNav } from "./modules/scrollFunctions.js";
 
         components: {
             "lightbox": Lightbox,
-            "carousel" : Carousel
+            "gallery" : Gallery
         }
     })
     .$mount("#app"); // also connects Vue to your wrapper in HTML

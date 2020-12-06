@@ -1,8 +1,11 @@
 /* footer styling */
 
 footer {
-    height:15vh;
-    background-color:$accent-darkteal;
+    background:url('../images/cloudy_background.png');
+    background-attachment:fixed;
     width:100%;
     color:$main-bg-color;
+    text-align:center;
+    padding-top:10vh;
+    padding-bottom:2vh;
 }
