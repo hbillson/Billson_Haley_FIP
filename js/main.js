@@ -47,7 +47,6 @@ import { stickyNav } from "./modules/scrollFunctions.js";
 
         methods: {
             setComponent(work) {
-                debugger;
                 this.mediaType = work.mediatype;
                 this.currentWork = work;
 

@@ -60,3 +60,26 @@
     height:80%;
 }
 
+
+@media only screen and (max-width: 600px) {
+    /* changes past the breakpoint */
+
+    #mainNav {
+        height:13vh;
+    }
+
+    .sticky {
+        position:absolute;
+    }
+
+    .nav_bar {
+        a {
+            line-height:13vh;
+            font-size:4vw;
+        }
+    }
+
+    .logo_image {
+        height:40%;
+    }
+}

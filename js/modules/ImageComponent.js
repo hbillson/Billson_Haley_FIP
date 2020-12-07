@@ -5,6 +5,8 @@ export default {
 
     template: 
     `<div class="image-viewer">
+        <div class="left_arrow">◀</div>
+        <div class="right_arrow">▶</div>
         <p class="info_toggle" @mouseover="showInfo" @mouseleave="hideInfo" >Hover over here to view project info.</p>
         <img :src="work.source">
         <div class="work_info">
