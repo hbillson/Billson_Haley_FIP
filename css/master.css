@@ -47,6 +47,14 @@
   line-height: inherit;
 }
 
+@media only screen and (max-width: 600px) {
+  /* changes past the breakpoint */
+  .button_link {
+    margin: auto;
+    width: 100%;
+  }
+}
+
 /* main page styling */
 body {
   font-family: "Work Sans", sans-serif;
@@ -141,6 +149,23 @@ body {
   height: 80%;
 }
 
+@media only screen and (max-width: 600px) {
+  /* changes past the breakpoint */
+  #mainNav {
+    height: 13vh;
+  }
+  .sticky {
+    position: absolute;
+  }
+  .nav_bar a {
+    line-height: 13vh;
+    font-size: 4vw;
+  }
+  .logo_image {
+    height: 40%;
+  }
+}
+
 /* landing box styling */
 .landing {
   height: 100vh;
@@ -178,6 +203,23 @@ body {
   margin-bottom: 40px;
 }
 
+@media only screen and (max-width: 600px) {
+  /* changes past the breakpoint */
+  #left {
+    width: 100%;
+  }
+  #right {
+    display: none;
+  }
+  .intro_text {
+    padding-top: 10vw;
+    width: 100%;
+    text-align: center;
+    font-size: 10vw;
+    margin-bottom: 10vw;
+  }
+}
+
 /* about section styling */
 .about {
   top: 20vh;
@@ -211,7 +253,7 @@ body {
 
 #header_box .name {
   font-family: "MOON GET!", sans-serif;
-  font-size: 150px;
+  font-size: 15vw;
   color: #ecf0f5;
   text-align: center;
 }
@@ -235,16 +277,16 @@ body {
           align-items: center;
   width: 100%;
   height: 50%;
+  margin-top: 5vw;
 }
 
 #bubbles_container .bubble {
-  margin: 2%;
-  border-radius: 230px;
+  margin: 6%;
   display: inline-block;
   background-color: #e6a0bd;
-  height: 10vw;
-  width: 10vw;
-  border-radius: 10vw;
+  height: 14vw;
+  width: 14vw;
+  border-radius: 14vw;
 }
 
 #bubbles_container .bubble p {
@@ -252,7 +294,7 @@ body {
   color: #ecf0f5;
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
-  font-size: 1vw;
+  font-size: 1.2vw;
   text-align: center;
   position: relative;
   height: 100%;
@@ -300,6 +342,43 @@ body {
 
 #information_container button:hover {
   background-color: #5e889b;
+}
+
+@media only screen and (max-width: 600px) {
+  /* changes past the breakpoint */
+  #header_box {
+    height: 50vh;
+    background-size: 200%;
+  }
+  #header_box .name {
+    font-size: 16vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    line-height: 25vw;
+  }
+  #bubbles_container {
+    height: 50vh;
+    margin: 0;
+  }
+  #bubbles_container .bubble {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+  }
+  #bubbles_container .bubble p {
+    font-size: 2.3vw;
+  }
+  #information_container {
+    width: 80%;
+  }
+  #information_container .subtitle {
+    font-size: 5vw;
+    line-height: 8vw;
+  }
+  #information_container .information {
+    margin-top: 10vw;
+    margin-bottom: 8vw;
+  }
 }
 
 /* works section styling */
@@ -432,6 +511,16 @@ body {
   background-color: #96dcd7;
 }
 
+@media only screen and (max-width: 600px) {
+  /* changes past the breakpoint */
+  #contact-container {
+    max-width: 100vw;
+  }
+  .contact-column {
+    padding: 0;
+  }
+}
+
 /* footer styling */
 footer {
   background: url("../images/cloudy_background.png");
@@ -460,6 +549,7 @@ footer {
   cursor: pointer;
   font-size: 20px;
   margin-left: 80%;
+  z-index: 9999;
 }
 
 .lightbox .image-viewer {
@@ -468,10 +558,50 @@ footer {
   height: 100%;
 }
 
+.lightbox .left_arrow {
+  display: block;
+  position: absolute !important;
+  left: 5 !important;
+  top: 50vh !important;
+  font-size: 4vw;
+  z-index: 102;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.lightbox .left_arrow {
+  display: block;
+  position: absolute !important;
+  left: 5 !important;
+  top: 50vh !important;
+  font-size: 4vw;
+}
+
+.lightbox .left_arrow:hover {
+  opacity: 0.8;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.lightbox .right_arrow {
+  display: block;
+  position: absolute !important;
+  right: 0;
+  margin-right: 5vw;
+  top: 50vh !important;
+  font-size: 4vw;
+}
+
+.lightbox .right_arrow:hover {
+  opacity: 0.8;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
 .lightbox img {
   position: relative;
-  width: 100%;
-  height: 90%;
+  width: 90%;
+  height: 80%;
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 40px;
@@ -525,5 +655,52 @@ footer {
 .lightbox .work_info .work_date {
   font-size: 1.2vw;
   padding-bottom: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+  /* changes past the breakpoint */
+  .lb-close {
+    font-size: 40px;
+    z-index: 9999;
+  }
+  .image-viewer {
+    height: 50%;
+  }
+  img {
+    width: 80%;
+    height: 40%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 0;
+  }
+  .work_info {
+    opacity: 1 !important;
+    position: absolute !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    margin-left: 10% !important;
+    width: 80% !important;
+    height: auto !important;
+    top: 45vh !important;
+    background-color: #fff !important;
+    border-radius: 0px !important;
+    color: #5e889b !important;
+  }
+  .work_info .work_title {
+    margin-top: 2vh !important;
+    font-size: 4vw !important;
+  }
+  .work_info .work_date {
+    font-size: 3vw !important;
+  }
+  .work_info .video-player {
+    height: 40%;
+  }
+  .work_info video {
+    height: 40%;
+  }
+  .info_toggle {
+    display: none;
+  }
 }
 /*# sourceMappingURL=master.css.map */

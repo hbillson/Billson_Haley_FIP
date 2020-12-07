@@ -61,3 +61,14 @@
             }
         }
 }
+
+@media only screen and (max-width: 600px) {
+    /* changes past the breakpoint */
+
+    #contact-container {
+        max-width:100vw;
+    }
+    .contact-column {
+        padding:0;
+    }
+}
